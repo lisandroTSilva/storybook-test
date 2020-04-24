@@ -1,0 +1,19 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { PureTaskList } from "../TaskList";
+import { defaultTasksData, withPinnedTasksData } from "../TaskList/TaskList.stories";
+import { actionsData } from "../Task/Task.stories";
+
+<Meta title="TaskList" component={PureTaskList} />
+
+# PureTaskList
+
+With `MDX` we can define a story for `PureTaskList` right in the middle of our
+markdown documentation.
+
+<Preview>
+    <Story name="Default">
+        <form>
+            <PureTaskList tasks={defaultTasksData} {...actionsData} />
+        </form>
+    </Story>
+</Preview>
